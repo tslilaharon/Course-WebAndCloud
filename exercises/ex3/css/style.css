@@ -169,6 +169,7 @@ header nav ul li {
     width: 750px;
     display: flex;
     flex-wrap: wrap;
+    background: #f999b71a;
 }
 
 #layout2 main>section article {
