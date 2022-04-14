@@ -37,7 +37,7 @@ header nav ul li {
 
 /*------Layout 1------*/
 
-#layout1 main {
+#layout1 .wrapper {
     display: flex;
     justify-content: center;
 }
@@ -65,7 +65,6 @@ header nav ul li {
 
 #layout1 nav ul {
     display: flex;
-    flex-wrap: wrap;
     height: 57px;
 }
 
@@ -117,6 +116,11 @@ header nav ul li {
     background: #F2789F;
 }
 
+#layout1 main section article:hover {
+    background: #DDA0DD;
+    transition: .5s;
+}
+
 #layout1 footer {
     max-width: 100%;
     height: 122px;
@@ -130,10 +134,11 @@ header nav ul li {
     background: #F9C5D5;
 }
 
-#layout2 main {
+#layout2 .wrapper {
     display: flex;
     justify-content: center;
 }
+
 #layout2 nav {
     display: flex;
     justify-content: center;
@@ -156,66 +161,255 @@ header nav ul li {
 }
 
 #layout2 nav ul li.selected {
-    background: #F999B7;
+    background: #F2789F;
 }
 
 #layout2 nav ul li:hover {
-    background: #F999B7;
+    background: #F2789F;
     transition: .5s;
 }
 
-#layout2 main>section {
-    padding-left: 27px;
+#layout2 .wrapper>section {
+    padding: 0px 30px;
     width: 750px;
     display: flex;
     flex-wrap: wrap;
     background: #f999b71a;
 }
 
-#layout2 main>section article {
+#layout2 .wrapper>section article {
     margin-right: 30px;
     width: 338px;
     height: 338px;
     background: #F2789F;
 }
 
-#layout2 main aside section {
+#layout2 .wrapper>section article:hover {
+    background: #DDA0DD;
+    transition: .5s;
+}
+
+#layout2 .wrapper aside section {
     display: flex;
     justify-content: center;
     height: 1647px;
     width: 274px;
-    background: #FEE3EC;
+    background: #F9C5D5;
     padding: 20px;
 }
 
-#layout2 main aside section article:nth-child(1) {
+#layout2 .wrapper aside section article:nth-child(1) {
+    position: absolute;
     width: 123px;
     height: 126px;
     background: #F2789F;
     align-self: flex-end;
 }
 
-#layout2 main aside section article:nth-child(2) {
+#layout2 .wrapper aside section article:nth-child(2) {
     width: 123px;
     height: 341px;
+    margin-left: 100px;
     background: #F2789F;
     align-self: flex-start;
 }
 
-#layout2 main>section article:nth-child(3) {
+#layout2 .wrapper aside section article:hover {
+    background: #DDA0DD;
+    transition: .5s;
+}
+
+#layout2 .wrapper>section article:nth-child(3) {
     margin-top: -200px;
 }
 
-#layout2 main>section article:nth-child(4) {
+#layout2 .wrapper>section article:nth-child(4) {
     margin-top: 50px;
 }
 
-#layout2 main>section article:nth-child(5) {
+#layout2 .wrapper>section article:nth-child(5) {
     margin-top: -520px;
 }
 
 #layout2 footer {
-    max-width: 100%;
+    margin: 0 auto;
+    max-width: 1400px;
     height: 122px;
     background: #F999B7;
+}
+
+@media screen and (max-width: 1384px) {
+    #layout2 .wrapper>section {
+        padding: 0 5px;
+    }
+}
+
+
+/*------Layout 3------*/
+
+#layout3 .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+#layout3 .wrapper header {
+    display: flex;
+    background: #ffe1ea;
+    width: 1000px;
+}
+
+#layout3 .wrapper header section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#layout3 header>a {
+    margin: 27px;
+}
+
+#layout3 #plus {
+    cursor: pointer;
+}
+
+#layout3 header div a {
+    display: flex;
+    justify-content: center;
+}
+
+#layout3 header nav {
+    align-self: flex-end;
+    width: 500px;
+    background: #F999B7;
+}
+
+#layout3 nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 57px;
+}
+
+#layout3 nav ul li {
+    width: 33%;
+}
+
+#layout3 nav ul li a {
+    text-align: center;
+    color: #FFFFFF;
+    width: 100%;
+    font-weight: 700;
+}
+
+#layout3 header nav ul li.selected {
+    background: #F2789F;
+    width: 34%;
+}
+
+#layout3 header nav ul li:hover {
+    background: #F2789F;
+    transition: .5s;
+}
+
+#layout3 .wrapper aside {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#layout3 section aside article {
+    width: 250px;
+    height: 250px;
+    background: #F2789F;
+}
+
+#layout3 section aside article:nth-child(1) {
+    opacity: 0.8
+}
+
+#layout3 section aside article:nth-child(2) {
+    opacity: 0.6
+}
+
+#layout3 section aside article:nth-child(3) {
+    opacity: 0.4
+}
+
+#layout3 section aside article:nth-child(4) {
+    opacity: 0.2
+}
+
+#layout3 .wrapper main #boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+#layout3 .wrapper main #boxes article {
+    width: 250px;
+    height: 250px;
+    background: #F2789F;
+}
+
+#layout3 .wrapper main #boxes article:hover {
+    background: #DDA0DD;
+    transition: .5s;
+}
+
+#layout3 .wrapper #boxes article:nth-child(2n-1) {
+    opacity: 0.2;
+}
+
+#layout3 .wrapper #boxes article:nth-child(3n-2) {
+    opacity: 0.4;
+}
+
+#layout3 .wrapper #boxes article:nth-child(3n-3) {
+    opacity: 0.6;
+}
+
+#layout3 .wrapper footer {
+    height: 122px;
+    width: 1000px;
+    background: #F999B7;
+}
+
+
+@media screen and (max-width: 1000px) {
+    #layout3 .wrapper header {
+        width: 500px;
+        flex-direction: column;
+    }
+
+    #layout3 .wrapper header section {
+        height: 400px;
+    }
+
+    #layout3 .wrapper #boxes {
+        width: 500px;
+    }
+
+    #layout3 .wrapper footer {
+        width: 500px;
+    }
+
+    #layout3 header section a {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    #layout3 nav ul {
+        height: 100%;
+    }
+
+    #layout3 nav ul li {
+        width: 33%;
+    }
+
+    #layout3 header nav ul li.selected {
+        width: 34%;
+    }
 }
