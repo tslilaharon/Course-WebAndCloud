@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" id="Firstform">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="icon" href="assets/images/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+    <form id="form1" action="http://se.shenkar.ac.il/teach/web1/get_form3.php" method="GET">
+        <div class="modal-wrap">
+            <div class="modal-header"><span class="is-active"></span><span></span><span></span></div>
+            <div class="modal-bodies">
+
+                <div class="modal-body modal-body-step-1 is-showing">
+                    <div class="title">HTML CSS & JavaScript Quiz</div>
+                    <div class="description">Enter your details to start the Quiz</div>
+                    <div class="row g-3">
+                        <div class="col-md-12">
+                            <label for="inputName" class="form-label">Full Name*</label>
+                            <input type="text" class="form-control" pattern="/^(?!.{51,})(\w+\s+\w+ ?)$/" id="inputName"
+                                name="fullName" placeholder="example" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="inputEmail" class="form-label">Email*</label>
+                            <input type="email" class="form-control" name="mail" id="inputEmail"
+                                placeholder="exam@example.com" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="inputPassword" class="form-label">Password*</label>
+                            <input type="password" id="inputPassword" class="form-control"
+                                aria-describedby="passwordHelpInline" name="pass" minlength="8" maxlength="20"
+                                placeholder="● ● ● ● ● ●" required>
+                            <span id="passwordHelp" class="form-text">
+                                Must be 6-20 characters long.
+                            </span>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="inputPhone" class="form-label">Phone*</label>
+                            <input type="tel" class="form-control" pattern="[0]{1}[0-9]{9}" name="phone" id="inputPhone"
+                                placeholder="Only numbers" required>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="button">Start</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body modal-body-step-2">
+                    <div class="title">Step 1</div>
+                    <div class="row g-3">
+                        <div class="col-md-12">
+                            <label for="inputAddress2" class="form-label">
+                                From which Website do you get the most information on Web Development?</label>
+                            <input type="url" class="form-control" name="website" id="inputWebsite"
+                                placeholder="www.example.com" required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="inputAddress" class="form-label">
+                                What the HTML element is used for inserting a line break?
+                            </label>
+                            <input type="text" class="form-control" name="address" id="inputAddress"
+                                placeholder="&#60 >">
+                        </div>
+
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <label for="inputCheck" class="form-label">What are the two correct ways to write a
+                                    JavaScript array? </label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="interests[]" type="checkbox" value="1"
+                                            id="Check1">
+                                        <label class="form-check-label" for="Check1">
+                                            let colors = new Array("red", "green", "blue");
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="interests[]" type="checkbox" value="2"
+                                            id="Check2">
+                                        <label class="form-check-label" for="Check2">
+                                            let colors = (1:"red", 2:"green", 3:"blue")
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="interests[]" type="checkbox" value="3"
+                                            id="Check3">
+                                        <label class="form-check-label" for="Check3">
+                                            let colors = ["red", "green", "blue"]
+                                        </label>
+                                    </div>
+                                </div>
+                        </fieldset>
+
+                        <div class="text-center">
+                            <div id="next" class="button">Next</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body modal-body-step-3">
+                    <div class="title">Step 2</div>
+                    <div class="row g-3">
+                        <div class="col-md-12">
+                            <label for="inputCity" class="form-label">Inside which HTML element do we put the
+                                JavaScript?</label>
+                            <select class="form-select" name="temper" aria-label="Default select example" required>
+                                <option selected>Select an option</option>
+                                <option value="1"> &#60 javascript> </option>
+                                <option value="2"> &#60 js></option>
+                                <option value="3"> &#60 script></option>
+                                <option value="3"> &#60 scripting></option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="inputAge" class="form-label">What will the code below output to the
+                                console?</label>
+                            <label for="inputAge" class="form-label">console.log(178 % 38);</label>
+                            <input type="number" class="form-control" name="age" id="inputAge" min="21" max="28"
+                                placeholder="21-28" required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="inputCity" class="form-label">How can you open a link in a new tab/browser
+                                window?</label>
+                            <input type="text" class="form-control" name="coffee" id="inputCoffee"
+                                placeholder="&#60 a href=url target=... >" required>
+                        </div>
+
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <label for="inputGender" class="form-label">Inline elements are normally displayed
+                                    without starting a new line.
+                                </label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="gender" type="radio" id="gridRadios1"
+                                            value="female" checked>
+                                        <label class="form-check-label" for="gridRadios1">
+                                            True
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="gender" type="radio" id="gridRadios2"
+                                            value="male">
+                                        <label class="form-check-label" for="gridRadios2">
+                                            False
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="text-center">
+                            <div class="button">Done!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="text-center">
+                <input class="rerun-button btn" type="submit" name="send" value="Send" id="send" >
+            </div>
+        </div>
+    </form>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
